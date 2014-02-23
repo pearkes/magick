@@ -11,7 +11,7 @@
 package magick
 
 /*
-#cgo pkg-config: MagickCore 
+#cgo pkg-config: MagickCore
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -334,7 +334,7 @@ func (im *MagickImage) Progressive() {
 }
 
 func (im *MagickImage) Quality(quality int) {
-	im.Image.quality = (C.size_t)(quality)
+	im.Image.quality = (C.ulong)(quality)
 }
 
 // Resize resizes the image based on the geometry string passed and stores the resized image in place
